@@ -9,10 +9,7 @@ import utils.Solution;
  * @brief Compute the count using naive divisors algorithm
  *        (passing from i:[1 to number], check if number divisible by i)
  */
-public class SequentialSolution1 implements Solution {
-    private long maxDivisorsCount = 0;
-    private ArrayList<Integer> numbers = new ArrayList<>();
-
+public class SequentialSolution1 extends Solution {
     private final int INTERVAL_BEGIN;
     private final int INTERVAL_END;
 
@@ -54,16 +51,6 @@ public class SequentialSolution1 implements Solution {
     public SequentialSolution1(int intervalBegin, int intervalEnd) {
         this.INTERVAL_BEGIN = intervalBegin;
         this.INTERVAL_END = intervalEnd;
-    }
-
-    @Override
-    public long getMaxDivisorsCount() {
-        return this.maxDivisorsCount;
-    }
-
-    @Override
-    public ArrayList<Integer> getNumbers() {
-        return this.numbers;
     }
 
 }

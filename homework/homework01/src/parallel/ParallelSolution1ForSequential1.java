@@ -11,9 +11,7 @@ import utils.Solution;
  * @brief Divide the range into chunks and compute for each chunk
  *        (on separate threads) using SequentialSolution1 algorithm
  */
-public class ParallelSolution1ForSequential1 implements Solution {
-    private long maxDivisorsCount = 0;
-    private ArrayList<Integer> numbers = new ArrayList<>();
+public class ParallelSolution1ForSequential1 extends Solution {
 
     @Override
     public void run() {
@@ -58,16 +56,6 @@ public class ParallelSolution1ForSequential1 implements Solution {
                 }
             }
         }
-    }
-
-    @Override
-    public long getMaxDivisorsCount() {
-        return this.maxDivisorsCount;
-    }
-
-    @Override
-    public ArrayList<Integer> getNumbers() {
-        return this.numbers;
     }
 
 }

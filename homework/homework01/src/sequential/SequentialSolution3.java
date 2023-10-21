@@ -9,9 +9,7 @@ import utils.Solution;
  * @brief Compute divisorsCount array -> find max
  *        -> find numbers with max divisors count
  */
-public class SequentialSolution3 implements Solution {
-    private long maxDivisorsCount = 0;
-    private ArrayList<Integer> numbers = new ArrayList<>();
+public class SequentialSolution3 extends Solution {
 
     @Override
     public void run() {
@@ -35,16 +33,6 @@ public class SequentialSolution3 implements Solution {
                 this.numbers.add(i);
             }
         }
-    }
-
-    @Override
-    public long getMaxDivisorsCount() {
-        return this.maxDivisorsCount;
-    }
-
-    @Override
-    public ArrayList<Integer> getNumbers() {
-        return this.numbers;
     }
 
 }
