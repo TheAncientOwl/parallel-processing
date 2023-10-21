@@ -1,0 +1,10 @@
+./src/Main.java
+./src/parallel/ParallelSolution1.java
+./src/utils/Config.java
+./src/utils/Solution.java
+./src/utils/ResultProvider.java
+./src/utils/Timer.java
+./src/utils/Utils.java
+./src/sequential/SequentialSolution2.java
+./src/sequential/SequentialSolution1.java
+./src/sequential/SequentialSolution3.java
