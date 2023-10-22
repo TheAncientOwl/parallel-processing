@@ -3,15 +3,15 @@ package parallel;
 import java.util.ArrayList;
 import java.util.List;
 
-import sequential.SequentialSolution1;
+import sequential.SequentialSolution2;
 import utils.Config;
 import utils.Solution;
 
 /**
- * @brief Divide the range into chunks and compute for each chunk
- *        (on separate threads) using SequentialSolution1 algorithm.
+ * @brief Spread the numbers in the interval evenly accross all threads.
+ *        Use
  */
-public class ParallelSolution1ForSequential1 extends Solution {
+public class ParallelSolution2ForSequential2 extends Solution {
 
     @Override
     public void run() {
@@ -19,15 +19,10 @@ public class ParallelSolution1ForSequential1 extends Solution {
         this.numbers = new ArrayList<>();
 
         List<Thread> threads = new ArrayList<>();
-        List<SequentialSolution1> solutions = new ArrayList<>();
+        List<SequentialSolution2> solutions = new ArrayList<>();
 
-        final int CHUNK_SIZE = Config.INTERVAL_END / Config.THREADS_COUNT;
-
-        for (int i = 0; i < Config.THREADS_COUNT; i += 1) {
-            int begin = i * CHUNK_SIZE + 1;
-            int end = i == (Config.THREADS_COUNT - 1) ? Config.INTERVAL_END : (i + 1) * CHUNK_SIZE;
-
-            SequentialSolution1 solution = new SequentialSolution1(begin, end);
+        for (int i = 1; i <= Config.THREADS_COUNT; i += 1) {
+            SequentialSolution2 solution = new SequentialSolution2(i, Config.INTERVAL_END, Config.THREADS_COUNT);
 
             solutions.add(solution);
             threads.add(new Thread(solution));
@@ -45,11 +40,11 @@ public class ParallelSolution1ForSequential1 extends Solution {
             }
         }
 
-        for (SequentialSolution1 solution : solutions) {
+        for (SequentialSolution2 solution : solutions) {
             this.maxDivisorsCount = Math.max(this.maxDivisorsCount, solution.getMaxDivisorsCount());
         }
 
-        for (SequentialSolution1 solution : solutions) {
+        for (SequentialSolution2 solution : solutions) {
             if (solution.getMaxDivisorsCount() == this.maxDivisorsCount) {
                 for (var num : solution.getNumbers()) {
                     this.numbers.add(num);

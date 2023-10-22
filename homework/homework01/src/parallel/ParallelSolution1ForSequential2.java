@@ -9,7 +9,7 @@ import utils.Solution;
 
 /**
  * @brief Divide the range into chunks and compute for each chunk
- *        (on separate threads) using SequentialSolution2 algorithm
+ *        (on separate threads) using SequentialSolution2 algorithm.
  */
 public class ParallelSolution1ForSequential2 extends Solution {
 

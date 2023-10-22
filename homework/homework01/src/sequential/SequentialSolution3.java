@@ -7,7 +7,7 @@ import utils.Solution;
 
 /**
  * @brief Compute divisorsCount array -> find max
- *        -> find numbers with max divisors count
+ *        -> find numbers with max divisors count.
  */
 public class SequentialSolution3 extends Solution {
 

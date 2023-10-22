@@ -1,5 +1,7 @@
 import parallel.ParallelSolution1ForSequential1;
 import parallel.ParallelSolution1ForSequential2;
+import parallel.ParallelSolution2ForSequential1;
+import parallel.ParallelSolution2ForSequential2;
 import sequential.SequentialSolution1;
 import sequential.SequentialSolution2;
 import sequential.SequentialSolution3;
@@ -13,7 +15,9 @@ public class Main {
         Main.benchmark("[Sequential solution 2]", new SequentialSolution2());
         Main.benchmark("[Sequential solution 3]", new SequentialSolution3());
         Main.benchmark("[Parallel solution 1 for sequential solution 1]", new ParallelSolution1ForSequential1());
-        Main.benchmark("[Parallel solution 1 for sequential solution 1]", new ParallelSolution1ForSequential2());
+        Main.benchmark("[Parallel solution 1 for sequential solution 2]", new ParallelSolution1ForSequential2());
+        Main.benchmark("[Parallel solution 2 for sequential solution 1]", new ParallelSolution2ForSequential1());
+        Main.benchmark("[Parallel solution 2 for sequential solution 2]", new ParallelSolution2ForSequential2());
         System.out.println("------------------------------------------------");
     }
 

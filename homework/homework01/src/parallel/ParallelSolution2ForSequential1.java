@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import sequential.SequentialSolution1;
-import utils.Config;
 import utils.Solution;
+import utils.Config;
 
 /**
- * @brief Divide the range into chunks and compute for each chunk
- *        (on separate threads) using SequentialSolution1 algorithm.
+ * @brief Spread the numbers in the interval evenly accross all threads.
+ *        Use
  */
-public class ParallelSolution1ForSequential1 extends Solution {
+public class ParallelSolution2ForSequential1 extends Solution {
 
     @Override
     public void run() {
@@ -21,13 +21,8 @@ public class ParallelSolution1ForSequential1 extends Solution {
         List<Thread> threads = new ArrayList<>();
         List<SequentialSolution1> solutions = new ArrayList<>();
 
-        final int CHUNK_SIZE = Config.INTERVAL_END / Config.THREADS_COUNT;
-
-        for (int i = 0; i < Config.THREADS_COUNT; i += 1) {
-            int begin = i * CHUNK_SIZE + 1;
-            int end = i == (Config.THREADS_COUNT - 1) ? Config.INTERVAL_END : (i + 1) * CHUNK_SIZE;
-
-            SequentialSolution1 solution = new SequentialSolution1(begin, end);
+        for (int i = 1; i <= Config.THREADS_COUNT; i += 1) {
+            SequentialSolution1 solution = new SequentialSolution1(i, Config.INTERVAL_END, Config.THREADS_COUNT);
 
             solutions.add(solution);
             threads.add(new Thread(solution));
