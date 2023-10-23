@@ -9,7 +9,7 @@ import utils.Solution;
 
 /**
  * @brief Spread the numbers in the interval evenly accross all threads.
- *        Use
+ *        Use SequentialSolution2 divisors approach
  */
 public class ParallelSolution2ForSequential2 extends Solution {
 

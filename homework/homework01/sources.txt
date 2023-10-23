@@ -1,5 +1,8 @@
 ./src/Main.java
-./src/parallel/ParallelSolution1.java
+./src/parallel/ParallelSolution1ForSequential2.java
+./src/parallel/ParallelSolution2ForSequential1.java
+./src/parallel/ParallelSolution2ForSequential2.java
+./src/parallel/ParallelSolution1ForSequential1.java
 ./src/utils/Config.java
 ./src/utils/Solution.java
 ./src/utils/ResultProvider.java

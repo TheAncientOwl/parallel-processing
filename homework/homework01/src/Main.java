@@ -9,6 +9,7 @@ import utils.Solution;
 import utils.Timer;
 import utils.Utils;
 
+// MORE INFO IN README.md file
 public class Main {
     public static void main(String[] args) {
         Main.benchmark("[Sequential solution 1]", new SequentialSolution1());
