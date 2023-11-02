@@ -9,7 +9,7 @@
 ## 2. How to run:
 ```
 # on linux linux:
-$ ./run-on-linux.sh (on linux)
+$ ./run.sh (on linux)
 
 # cross-platform using javac & java:
 $ cd src
