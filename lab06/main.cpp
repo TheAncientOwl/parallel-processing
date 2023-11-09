@@ -60,10 +60,18 @@ void incrementWithMutex(int& x, int iterations_count, std::mutex& mutex)
     }
 }
 
+void incrementWithAtomic(std::atomic<int>& x, int iterations_count)
+{
+    for (int i = 0; i < iterations_count; ++i)
+    {
+        ++x;
+    }
+}
+
 void testRaceCondition()
 {
     {
-        int x{0};
+        int x{ 0 };
         const int it_count{ 1000000 };
 
         std::thread thread1{increment, std::ref(x), it_count};
@@ -75,7 +83,7 @@ void testRaceCondition()
     }
 
     {
-        int x{0};
+        int x{ 0 };
         std::mutex mutex{};
         const int it_count{ 1000000 };
 
@@ -85,6 +93,18 @@ void testRaceCondition()
         thread1.join();
         thread2.join();
         printf("X should be %d, X = %d\n", it_count * 2, x);
+    }
+
+    {
+        std::atomic<int> x{ 0 };
+        const int it_count{ 1000000 };
+
+        std::thread thread1{incrementWithAtomic, std::ref(x), it_count};
+        std::thread thread2{incrementWithAtomic, std::ref(x), it_count};
+
+        thread1.join();
+        thread2.join();
+        printf("X should be %d, X = %d\n", it_count * 2, x.load());
     }
 }
 
