@@ -80,7 +80,7 @@ public class TestSolutieTema {
     public static void testPerformantaCalculMedieStudentiInscrisiCurs() {
         final int nrProcesoare = getNrProcesoare();
         final double speedup = calculMedieVarstaStudentiInscrisi(REPETARI);
-        String msg = "Solutia paralela trebuie sa ruleze de cel putin 1.2x mai repede ";
+        String msg = "Solutia paralela trebuie sa ruleze de 01.2x mai repede ";
 
         System.out.println("Test: " + msg);
         System.out.println("Nr procesoare: " + nrProcesoare);
@@ -216,21 +216,23 @@ public class TestSolutieTema {
 
     public static void main(String[] args) {
         System.out.println("Start...");
-        testCalculMedieStudentiInscrisiCurs();
-        System.out.println("--------------------------------------------\n");
-        testPerformantaCalculMedieStudentiInscrisiCurs();
-        System.out.println("--------------------------------------------\n");
 
-        // testDeterminaCelMaiComunPrenumePentruStudentiiNeinregistrati();
+        // testCalculMedieStudentiInscrisiCurs();
         // System.out.println("--------------------------------------------\n");
-        // testPerformantaDeterminaCelMaiComunPrenumePentruStudentiiNeinregistrati();
+        // testPerformantaCalculMedieStudentiInscrisiCurs();
         // System.out.println("--------------------------------------------\n");
+
+        testDeterminaCelMaiComunPrenumePentruStudentiiNeinregistrati();
+        System.out.println("--------------------------------------------\n");
+        testPerformantaDeterminaCelMaiComunPrenumePentruStudentiiNeinregistrati();
+        System.out.println("--------------------------------------------\n");
 
         // testDeterminaNumarStudentiNepromovati();
         // System.out.println("--------------------------------------------\n");
         // testPerformantaDeterminaNumarStudentiNepromovati();
         // System.out.println("--------------------------------------------\n");
-        // System.out.println("Sfarsit implementare");
+
+        System.out.println("Sfarsit implementare");
     }
 
 }
