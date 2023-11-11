@@ -217,20 +217,20 @@ public class TestSolutieTema {
     public static void main(String[] args) {
         System.out.println("Start...");
 
-        // testCalculMedieStudentiInscrisiCurs();
-        // System.out.println("--------------------------------------------\n");
-        // testPerformantaCalculMedieStudentiInscrisiCurs();
-        // System.out.println("--------------------------------------------\n");
+        testCalculMedieStudentiInscrisiCurs();
+        System.out.println("--------------------------------------------\n");
+        testPerformantaCalculMedieStudentiInscrisiCurs();
+        System.out.println("--------------------------------------------\n");
 
         testDeterminaCelMaiComunPrenumePentruStudentiiNeinregistrati();
         System.out.println("--------------------------------------------\n");
         testPerformantaDeterminaCelMaiComunPrenumePentruStudentiiNeinregistrati();
         System.out.println("--------------------------------------------\n");
 
-        // testDeterminaNumarStudentiNepromovati();
-        // System.out.println("--------------------------------------------\n");
-        // testPerformantaDeterminaNumarStudentiNepromovati();
-        // System.out.println("--------------------------------------------\n");
+        testDeterminaNumarStudentiNepromovati();
+        System.out.println("--------------------------------------------\n");
+        testPerformantaDeterminaNumarStudentiNepromovati();
+        System.out.println("--------------------------------------------\n");
 
         System.out.println("Sfarsit implementare");
     }

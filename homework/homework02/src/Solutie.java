@@ -3,6 +3,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @Student Delegeanu Alexandru-Gabriel
+ * @Grupa 1146
+ */
+
 class ThreadSumaVarsteiStudentiPromovati extends Thread {
         private final Student[] listaStudenti;
         private final int begin;
