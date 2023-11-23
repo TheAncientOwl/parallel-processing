@@ -106,9 +106,9 @@ void vectorSum()
     PRETTY_FUNC();
 
     const auto c_arr_size{ 100 };
-    const auto c_arr_holder_arr = std::make_unique<int[]>(c_arr_size);
+    const auto c_arr_holder = std::make_unique<int[]>(c_arr_size);
 
-    auto arr = c_arr_holder_arr.get();
+    auto arr = c_arr_holder.get();
     for (int i = 0; i < c_arr_size; i++)
     {
         arr[i] = i + 1;
