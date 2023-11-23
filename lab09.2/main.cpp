@@ -23,6 +23,8 @@ bool isPrime(long num)
     return true;
 }
 
+namespace solutions {
+
 int sequentialSolution(long begin, long end)
 {
     auto primes_count{ 0 };
@@ -99,15 +101,18 @@ int loadBalancedParallelSolution(long begin, long end)
     return primes_count;
 }
 
+} // namespace solutions
+
+
 int main()
 {
     // constexpr auto c_interval_end{ 3e5 };
     constexpr auto c_interval_end{ 5e5 };
 
-    benchmark("sequentialSolution", sequentialSolution, 1, c_interval_end);
-    benchmark("parallelSolutionWithMutex", parallelSolutionWithMutex, 1, c_interval_end);
-    benchmark("parallelSolutionWithPrivate", parallelSolutionWithPrivate, 1, c_interval_end);
-    benchmark("loadBalancedParallelSolution", loadBalancedParallelSolution, 1, c_interval_end);
+    benchmark("sequentialSolution", solutions::sequentialSolution, 1, c_interval_end);
+    benchmark("parallelSolutionWithMutex", solutions::parallelSolutionWithMutex, 1, c_interval_end);
+    benchmark("parallelSolutionWithPrivate", solutions::parallelSolutionWithPrivate, 1, c_interval_end);
+    benchmark("loadBalancedParallelSolution", solutions::loadBalancedParallelSolution, 1, c_interval_end);
 
     return 0;
 }
