@@ -2,6 +2,7 @@
 #include <omp.h>
 
 #define PRETTY_FUNC() printf("------------------------------------------------\n"); printf(__PRETTY_FUNCTION__); printf("\n");
+
 namespace example {
 
 void base()
