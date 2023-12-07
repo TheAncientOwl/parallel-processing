@@ -130,6 +130,11 @@ void array_sum()
     printf("Sum: %d\n", sum);
 }
 
+void benchmark()
+{
+
+}
+
 } // namespace parallel_for
 
 
@@ -143,7 +148,8 @@ int main()
 
     // barrier::test();
 
-    parallel_for::array_sum();
+    // parallel_for::array_sum();
+    parallel_for::benchmark();
 
     return 0;
 }
